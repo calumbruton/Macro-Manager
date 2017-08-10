@@ -1,0 +1,214 @@
+/*
+Sass file to be compiled into CSS and used for the index.html file of the application
+Created by: Calum Bruton on Friday, August 4th 2017
+*/
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0; }
+
+.container {
+  width: 100%;
+  height: 100%; }
+
+::-webkit-scrollbar {
+  width: 10px; }
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 10px #0f0f0f;
+  background: #0f0f0f;
+  border-radius: 0px; }
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #1e1e1e;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
+
+/*
+.reg-checkbox{
+	//-webkit-appearance: none;
+	background-color: $white;
+	border: 1px solid $grey;
+	padding: 7px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+	float: right;
+	padding-right: $padding-xl;
+}*/
+#leftpane {
+  width: 20%;
+  height: 100%;
+  float: left;
+  background-color: #0f0f0f;
+  border-collapse: collapse;
+  overflow-y: scroll;
+  overflow-x: hidden; }
+  #leftpane .inner {
+    padding-left: 15px; }
+    #leftpane .inner h1 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 30px;
+      font-weight: 500;
+      font-style: italic;
+      color: #1ed760; }
+    #leftpane .inner h2 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 25px;
+      font-weight: 500;
+      font-style: italic;
+      color: #aaaaaa; }
+    #leftpane .inner p {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      color: #0f0f0f; }
+    #leftpane .inner input[type=text] {
+      width: 150px;
+      height: 20px;
+      border: 2px solid #aaaaaa;
+      border-radius: 10px;
+      padding: 2px 6px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out; }
+    #leftpane .inner input[type=text]:focus {
+      border: 4px solid #1ed760;
+      outline: none; }
+    #leftpane .inner ul {
+      list-style: none;
+      color: #aaaaaa;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      padding-left: 0px; }
+      #leftpane .inner ul li {
+        cursor: pointer;
+        cursor: hand;
+        padding-bottom: 4px; }
+        #leftpane .inner ul li:hover, #leftpane .inner ul li:focus {
+          color: #1ed760; }
+
+#middlepane {
+  width: 60%;
+  height: 100%;
+  float: left;
+  background-color: #282828;
+  border-collapse: collapse;
+  overflow-y: scroll;
+  overflow-x: hidden; }
+  #middlepane .inner {
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px; }
+    #middlepane .inner h1 {
+      font-family: 'Roboto',  sans-serif;
+      font-weight: 500;
+      font-style: italic;
+      color: white;
+      font-size: 40px; }
+    #middlepane .inner h2 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 25px;
+      font-weight: 500;
+      font-style: italic;
+      color: white; }
+    #middlepane .inner #detailsHeader {
+      padding-top: 50px; }
+    #middlepane .inner p {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-size: 12;
+      color: white; }
+    #middlepane .inner table {
+      width: 100%;
+      table-layout: fixed;
+      padding-bottom: 40px; }
+    #middlepane .inner th {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-size: 16;
+      color: white; }
+    #middlepane .inner td {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-size: 14;
+      color: #aaaaaa;
+      text-align: center; }
+    #middlepane .inner th:first-child {
+      text-align: left;
+      width: 25%; }
+    #middlepane .inner td:first-child {
+      text-align: left;
+      width: 25%; }
+    #middlepane .inner #progressBar {
+      width: 100%;
+      background-color: #aaaaaa; }
+    #middlepane .inner #completionBar {
+      width: 1%;
+      height: 20px;
+      background-color: #1ed760;
+      text-align: center;
+      /* To center it horizontally (if you want) */
+      line-height: 20px;
+      /* To center it vertically */
+      color: white; }
+    #middlepane .inner #calorieGoal {
+      float: right; }
+    #middlepane .inner #macroChart {
+      height: 100px;
+      width: 60%;
+      padding-top: 20px; }
+
+#rightpane {
+  width: 20%;
+  height: 100%;
+  position: relative;
+  float: left;
+  background-color: #0f0f0f;
+  border-collapse: collapse; }
+  #rightpane .inner {
+    padding-left: 30px;
+    /*Submit button style properties*/ }
+    #rightpane .inner h1 {
+      font-family: 'Roboto',  sans-serif;
+      font-weight: 500;
+      font-style: italic;
+      color: #aaaaaa;
+      font-size: 25px; }
+    #rightpane .inner p {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      color: #0f0f0f; }
+    #rightpane .inner label {
+      color: #aaaaaa; }
+    #rightpane .inner input[type=text] {
+      width: 60%;
+      border-radius: 4px;
+      border: 3px #aaaaaa;
+      resize: none;
+      outline: none;
+      box-sizing: border-box;
+      padding: 4px 8px;
+      margin: 8px 0;
+      color: #282828;
+      font-family: 'Open Sans', sans-serif; }
+    #rightpane .inner input[type=text]:focus {
+      border: 3px solid #1ed760;
+      outline: none; }
+    #rightpane .inner input[type=submit] {
+      margin-top: 15px;
+      width: 67.5%;
+      background: #aaaaaa;
+      border: #aaaaaa;
+      border-radius: 10px;
+      padding: 8px; }
+    #rightpane .inner input[type=submit]:hover {
+      background: #1ed760;
+      border: #aaaaaa; }
+    #rightpane .inner input[type=submit]:focus {
+      outline: none;
+      border: #1ed760; }
+
+/*# sourceMappingURL=home-page.css.map */

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <!--Include style sheet, javascript, and google fonts (Roboto & Open Sans)-->
+  <link rel="stylesheet" type="text/css" href="css/home-page.css">
+  <script type="text/javascript" src="home-page.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+
+<!-- Insert this line above script imports  -->
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+<!-- normal script imports etc  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+
+<!-- Insert this line after script imports -->
+<script>if (window.module) module = window.module;</script>
+
+
+  <title>Macro Manager</title>
+  <script src="handlebars-v4.0.2.js"></script>
+
+</head>
+
+
+
+<body onload="initialize()">
+  <div class="container">
+
+    <!--LEFT PANE OF HOME PAGE-->
+    <div id="leftpane">
+      <!--used for the inner content of the left pane, this is so padding does not affect the total width of the column-->
+      <div class = "inner">
+        <h1>Macro Manager</h1>
+        <input type="text" name="search" placeholder="Search..">
+        <!--Favourites is updated by the user and onloading will add all of their favourites from data-->
+        <h2>Favourites</h2>
+          <ul id="favList"></ul>
+        <h2>Saved</h2>
+          <ul id="savList"></ul>
+      </div>
+    </div>
+
+
+    <!--MIDDLE PANE OF HOME PAGE-->
+    <div id="middlepane">
+      <div class="inner">
+
+        <h1>Today</h1>
+
+        <!--Calories completion bar -->
+        <p style="text-align:left;"><span id = "todaysCals"></span><span id="calorieGoal"> </span></p>
+        <div id="progressBar">
+          <div id="completionBar"></div>
+        </div>
+
+        <div id="chartArea">
+          <canvas id="macroChart"></canvas>
+        </div>
+        <h2>Details</h2>
+      </div>
+    </div>
+
+
+    <!--THE RIGHT PANE OF THE HOME PAGE-->
+    <div id="rightpane">
+      <div class="inner">
+        <h1>Update</h1>
+        
+          <br>
+          <div>
+            <label for="foodName">Food</label><br>
+            <input type="text" name="Food" id="foodName"><br>
+            <label for="portionSize">Portion Size (g/ml)</label><br>
+            <input type="text" name="portion" id="portionSize"><br>
+            <label for="calories">Calories</label><br>
+            <input type="text" name="Calories" id="calories"><br>
+            <label for="protein">Protein (g)</label><br>
+            <input type="text" name="Protein" id="protein"><br>
+            <label for="fat">Fat (g)</label><br>
+            <input type="text" name="Fat" id="fat"><br>
+            <label for="carbs">Carbs (g)</label><br>
+            <input type="text" name="Carbs" id="carbs"><br>
+            <label for="sugar">Sugar (g)</label><br>
+            <input type="text" name="Sugar" id="sugar"><br>
+
+
+            <label for="saved">Save recipe</label>
+            <input type="checkbox" name="Saved" value="Saved" id="saved" class="reg-checkbox"><br>
+            <label for="favourite">Favourite </label>
+            <input type="checkbox" name="Favourite" value="Favourite" id="favourite" class="reg-checkbox">
+
+            <input type="submit" value="Add" onclick="submitFood()">
+          </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+
+</html>

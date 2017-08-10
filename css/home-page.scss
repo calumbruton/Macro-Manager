@@ -1,0 +1,298 @@
+/*
+Sass file to be compiled into CSS and used for the index.html file of the application
+Created by: Calum Bruton on Friday, August 4th 2017
+*/
+
+// Colors
+//$green: rgb(30, 215, 96);
+//$gold: #FFD700
+//$aquamarine: #7FFFD4;
+//$black: rgb(24, 24, 24);
+$green: rgb(30, 215, 96);
+$light-black: rgb(40, 40, 40);
+$black: rgb(15, 15, 15);
+$grey: rgb(170, 170, 170);
+$sand: rgb(200, 200, 200);
+$white: rgb(255, 255, 255);
+
+
+// Spacing
+
+$padding-xs  : 5px;
+$padding-sm  : 10px;
+$padding     : 15px;
+$padding-lg  : 30px;
+$padding-xl  : 60px;
+
+$margin-xs  : 5px;
+$margin-sm  : 10px;
+$margin     : 15px;
+$margin-lg  : 30px;
+$margin-xl  : 60px;
+
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+$width : auto-width;
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+		width: 10px;
+	}
+::-webkit-scrollbar-track {
+	    -webkit-box-shadow: inset 0 0 10px $black; 
+	    background: $black;
+	    border-radius: 0px;
+	}
+::-webkit-scrollbar-thumb {
+	    -webkit-border-radius: 10px;
+	    border-radius: 10px;
+	    background: rgb(30, 30, 30); 
+	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+	}
+
+/*
+.reg-checkbox{
+	//-webkit-appearance: none;
+	background-color: $white;
+	border: 1px solid $grey;
+	padding: 7px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+	float: right;
+	padding-right: $padding-xl;
+}*/
+
+
+//left pane of the home page
+#leftpane {
+    width: 20%;
+    height: 100%;
+    float: left;
+    background-color: $black;
+    border-collapse: collapse;
+	overflow-y:scroll;
+	overflow-x:hidden;
+
+    //padding-top: $padding-lg+10px;
+    //inner is the class used for the inner content of the left pane
+    .inner {
+	    padding-left: $padding;
+	    h1 {
+			font-family: 'Roboto', sans-serif;
+			font-size: 30px;
+			font-weight: 500;
+			font-style: italic;
+			color: $green;
+		}
+		h2 {
+			font-family: 'Roboto', sans-serif;
+			font-size: 25px;
+			font-weight: 500;
+			font-style: italic;
+			color: $grey;
+		}
+		p{
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-size: 18px;
+			color: $black;
+		}
+		input[type=text] {
+		    width: 150px;
+		    height: 20px;
+		    border: 2px solid $grey;
+		    border-radius: 10px;
+		    padding: 2px 6px;
+		    -webkit-transition: width 0.4s ease-in-out;
+		    transition: width 0.4s ease-in-out;
+		}   
+		input[type=text]:focus {
+	    	border: 4px solid $green;
+	    	outline:none;
+		}
+		ul{
+			list-style: none;
+			color: $grey;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 300;
+			font-size: 14px;
+			padding-left: 0px;
+			li{
+				cursor: pointer; cursor: hand;
+				//The spacing between each element
+				padding-bottom: 4px;
+				&:hover, &:focus{
+					color:$green;
+				}
+			}
+		}
+	}
+}
+
+//middle pane of the home page 
+#middlepane {
+    width: 60%;
+    height: 100%;
+    float: left;
+    background-color: $light-black;
+    border-collapse: collapse;     
+    overflow-y:scroll;
+    overflow-x:hidden;
+
+    .inner {
+    	padding-top: $padding+25px; 
+    	padding-left: $padding-lg;
+    	padding-right: $padding-lg;
+		h1{
+			font-family: 'Roboto',  sans-serif;
+			font-weight: 500;
+			font-style: italic;
+			color: $white;
+			font-size:40px;
+		}
+		h2 {
+			font-family: 'Roboto', sans-serif;
+			font-size: 25px;
+			font-weight: 500;
+			font-style: italic;
+			color: $white;
+
+		}
+			#detailsHeader{
+				padding-top: 50px;
+			}
+		p{
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-size: 12;
+			color: $white;
+		}
+		table{
+			width: 100%;
+			table-layout : fixed;
+			padding-bottom: 40px;
+		}
+		th{
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-size: 16;
+			color: $white;
+		}
+		td{
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-size: 14;
+			color: $grey;
+			text-align: center;
+		}
+
+		//Alter the first column of the table rows
+		th:first-child {
+		  text-align: left;
+		  width: 25%;
+		}
+		td:first-child {
+		  text-align: left;
+		  width: 25%;
+		}
+
+		#progressBar {
+		    width: 100%;
+		    background-color: $grey;
+		}
+		#completionBar {
+		    width: 1%;
+		    height: 20px;
+		    background-color: $green;
+		    text-align: center; /* To center it horizontally (if you want) */
+		    line-height: 20px; /* To center it vertically */
+		    color: white; 
+		}
+		#calorieGoal {
+			float:right;
+		}
+		#macroChart{
+			height: 100px; 
+			width: 60%;
+			padding-top: 20px
+		}
+	}	
+}
+
+//right pane of the home page
+#rightpane {
+	width: 20%;
+	height: 100%;
+	position: relative;
+	float: left;
+	background-color: $black;
+	border-collapse: collapse;
+	.inner {
+		padding-left: $padding-lg;
+		h1{
+			font-family: 'Roboto',  sans-serif;
+			font-weight: 500;
+			font-style: italic;
+			color: $grey;
+			font-size: 25px;
+		}
+		p{
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-size: 20px;
+			color: $black;
+		}
+		label {
+			color: $grey;
+
+		}
+		//The CSS for the food input form
+		input[type=text] {
+			width: 60%;
+			border-radius: 4px;
+			border: 3px $grey;
+			resize: none;
+			outline: none;
+			box-sizing: border-box; 
+			padding: 4px 8px;
+		    margin: 8px 0;
+		    color: $light-black;
+		    font-family: 'Open Sans', sans-serif;
+		}
+		input[type=text]:focus {
+	    	border: 3px solid $green;
+	    	outline:none;
+	    }
+
+		 /*Submit button style properties*/
+		input[type=submit] {
+			margin-top: 15px;
+			width: 67.5%;
+			background: $grey;
+			border: $grey;
+			border-radius: 10px;
+			padding: 8px;
+		}
+		input[type=submit]:hover {
+			background: $green;
+			border: $grey;
+		}
+		input[type=submit]:focus {
+			outline:none;
+			border: $green;
+		}
+
+	}
+}
+
+
+
