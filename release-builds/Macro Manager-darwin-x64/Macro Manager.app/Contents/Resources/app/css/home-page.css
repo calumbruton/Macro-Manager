@@ -17,7 +17,7 @@ body, html {
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 10px #0f0f0f;
   background: #0f0f0f;
-  border-radius: 10px; }
+  border-radius: 0px; }
 
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
@@ -79,11 +79,15 @@ body, html {
       list-style: none;
       color: #aaaaaa;
       font-family: 'Open Sans', sans-serif;
-      font-weight: 600;
+      font-weight: 300;
       font-size: 14px;
       padding-left: 0px; }
       #leftpane .inner ul li {
+        cursor: pointer;
+        cursor: hand;
         padding-bottom: 4px; }
+        #leftpane .inner ul li:hover, #leftpane .inner ul li:focus {
+          color: #1ed760; }
 
 #middlepane {
   width: 60%;
@@ -109,11 +113,34 @@ body, html {
       font-weight: 500;
       font-style: italic;
       color: white; }
+    #middlepane .inner #detailsHeader {
+      padding-top: 50px; }
     #middlepane .inner p {
       font-family: 'Open Sans', sans-serif;
       font-weight: 400;
       font-size: 12;
       color: white; }
+    #middlepane .inner table {
+      width: 100%;
+      table-layout: fixed;
+      padding-bottom: 40px; }
+    #middlepane .inner th {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-size: 16;
+      color: white; }
+    #middlepane .inner td {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-size: 14;
+      color: #aaaaaa;
+      text-align: center; }
+    #middlepane .inner th:first-child {
+      text-align: left;
+      width: 25%; }
+    #middlepane .inner td:first-child {
+      text-align: left;
+      width: 25%; }
     #middlepane .inner #progressBar {
       width: 100%;
       background-color: #aaaaaa; }

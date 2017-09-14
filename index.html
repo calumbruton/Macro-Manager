@@ -20,7 +20,6 @@
 
 
   <title>Macro Manager</title>
-  <script src="handlebars-v4.0.2.js"></script>
 
 </head>
 
@@ -37,9 +36,9 @@
         <input type="text" name="search" placeholder="Search..">
         <!--Favourites is updated by the user and onloading will add all of their favourites from data-->
         <h2>Favourites</h2>
-          <ul id="favList"></ul>
+          <ul id="favList" class="saved_or_faved"></ul>
         <h2>Saved</h2>
-          <ul id="savList"></ul>
+          <ul id="savList" class="saved_or_faved"></ul>
       </div>
     </div>
 
@@ -80,7 +79,10 @@
             <label for="foodName">Food</label><br>
             <input type="text" name="Food" id="foodName"><br>
             <label for="portionSize">Portion Size (g/ml)</label><br>
-            <input type="text" name="portion" id="portionSize"><br>
+            <input type="text" name="portion" id="portionSize"><br><br><br>
+
+            <label for="labelPortion">Label Portion (g/ml)</label><br>
+            <input type="text" name="labelPortion" id="labelPortion"><br>
             <label for="calories">Calories</label><br>
             <input type="text" name="Calories" id="calories"><br>
             <label for="protein">Protein (g)</label><br>

@@ -1,11 +1,6 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const url = require('url')
-var Datastore = require('nedb')
-
-//Create the database or load it if it does not exist, this is an embedded NeDB database
-db = new Datastore({ filename: 'database/food-data', autoload: true });
-
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -28,7 +23,7 @@ function createWindow () {
   }))
 
   // Open the DevTools.
-  win.webContents.openDevTools()
+  //win.webContents.openDevTools()
 
   // Emitted when the window is closed.
   win.on('closed', () => {
