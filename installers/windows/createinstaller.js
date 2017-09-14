@@ -14,7 +14,7 @@ function getInstallerConfig () {
     const outPath = path.join(rootPath, 'release-builds')
 
     return Promise.resolve({
-       appDirectory: path.join(outPath, 'Macro\ Manager\ app-win32-ia32/'),
+       appDirectory: path.join(outPath, 'Macro\ Manager-win32-ia32/'),
        authors: 'Calum Bruton',
        noMsi: true,
        outputDirectory: path.join(outPath, 'windows-installer'),
